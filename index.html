@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ติดตามการบริหารจัดการงบประมาณ</title>
+  <style>
+    body {
+      font-family: 'Prompt', sans-serif;
+      background-color: #fef6f6;
+      color: #333;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      background: #ffd6e0;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+    form {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #fdf3f3;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 25px;
+      padding: 12px;
+      background-color: #ff9aa2;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff758f;
+    }
+  </style>
+</head>
+<body>
+  <h1>ติดตามการบริหารจัดการงบประมาณ</h1>
+  <form id="budgetForm" onsubmit="submitForm(); return false;">
+    <label>หน่วยงาน <input name="entry.1200588411" type="text" required></label>
+    <label>รหัสหน่วยเบิกจ่าย <input name="entry.348411617" type="number" required></label>
+    <label>เจ้าหน้าที่ผู้รับผิดชอบ <input name="entry.1184625043" type="text" required></label>
+    <label>หมายเลขโทรศัพท์ ที่ติดต่อได้โดยตรง <input name="entry.1386238598" type="tel" required></label>
+    <label>ประเภทงบประมาณรายจ่ายที่ได้รับจัดสรร 
+      <select name="entry.1665345784" required>
+        <option value="งบลงทุน">งบลงทุน</option>
+        <option value="งบอุดหนุนเฉพาะกิจ">งบอุดหนุนเฉพาะกิจ</option>
+        <option value="งบลงทุน และงบอุดหนุนเฉพาะกิจ">งบลงทุน และงบอุดหนุนเฉพาะกิจ</option>
+      </select>
+    </label>
+    <label>วงเงินงบลงทุนที่ได้รับรับจัดสรร บาท <input name="entry.772619638" type="text" required></label>
+    <label>จำนวนโครงการงบลงทุน <input name="entry.1383564750" type="number" required></label>
+    <label>จำนวนโครงการงบลงทุนที่อยู่ระหว่างดำเนินการจัดซื้อจัดจ้าง <input name="entry.1239308168" type="number" required></label>
+    <label>วงเงินรวมโครงการงบลงทุนที่อยู่ระหว่างดำเนินการจัดซื้อจัดจ้าง <input name="entry.959453121" type="text" required></label>
+    <label>จำนวนโครงการงบลงทุนที่รอลงนามหรือลงนามในสัญญาเรียบร้อยแล้ว <input name="entry.324090343" type="number" required></label>
+    <label>วงเงินรวมโครงการงบลงทุนที่รอลงนามหรือลงนามในสัญญาเรียบร้อยแล้ว <input name="entry.1461477695" type="text" required></label>
+    <label>จำนวนโครงการงบลงทุนที่ยังไม่ดำเนินการ <input name="entry.1131987823" type="number" required></label>
+    <label>วงเงินรวมโครงการงบลงทุนที่ยังไม่ดำเนินการ <input name="entry.726594445" type="number" required></label>
+    <label>โครงการงบลงทุนที่ยังไม่ดำเนินการโปรดระบุเหตุผล <input name="entry.1619696765" type="text" required></label>
+    <label>วงเงินงบอุดหนุนเฉพาะกิจที่ได้รับรับจัดสรร บาท <input name="entry.1428612293" type="text" required></label>
+    <label>จำนวนโครงการงบอุดหนุนเฉพาะกิจ <input name="entry.1163500677" type="number" required></label>
+    <label>จำนวนโครงการงบอุดหนุนเฉพาะกิจที่อยู่ระหว่างดำเนินการจัดซื้อจัดจ้าง <input name="entry.981233755" type="number" required></label>
+    <label>วงเงินรวมโครงการ งบอุดหนุนเฉพาะกิจที่อยู่ระหว่างดำเนินการจัดซื้อจัดจ้าง <input name="entry.1932530303" type="text" required></label>
+    <label>จำนวนโครงการงบอุดหนุนเฉพาะกิจที่รอลงนามหรือลงนามในสัญญาเรียบร้อยแล้ว <input name="entry.440090288" type="number" required></label>
+    <label>วงเงินรวมโครงการงบอุดหนุนเฉพาะกิจที่รอลงนามหรือลงนามในสัญญาเรียบร้อยแล้ว <input name="entry.964657266" type="text" required></label>
+    <label>จำนวนโครงการงบอุดหนุนเฉพาะกิจที่ยังไม่ดำเนินการ <input name="entry.133220979" type="number" required></label>
+    <label>วงเงินรวมโครงการงบอุดหนุนเฉพาะกิจที่ยังไม่ดำเนินการ <input name="entry.616641343" type="text" required></label>
+    <label>โครงการงบอุดหนุนเฉพาะกิจที่ยังไม่ดำเนินการโปรดระบุเหตุผล <input name="entry.658531621" type="text" required></label>
+    <button type="submit">ส่งแบบฟอร์ม</button>
+  </form>
+
+  <script>
+    function submitForm() {
+      const form = document.getElementById("budgetForm");
+      const formData = new FormData(form);
+      const query = new URLSearchParams(formData).toString();
+      const url = `https://docs.google.com/forms/d/e/1FAIpQLSdDUtfgx8NluyOVGJkHTtJ_ghZQektJpiRr5aDCUmL5q2KczA/formResponse?${query}`;
+      fetch(url, { method: 'POST', mode: 'no-cors' })
+        .then(() => {
+          alert("ส่งข้อมูลเรียบร้อยแล้ว");
+          form.reset();
+        })
+        .catch(() => alert("เกิดข้อผิดพลาดในการส่งข้อมูล"));
+    }
+  </script>
+</body>
+</html>
